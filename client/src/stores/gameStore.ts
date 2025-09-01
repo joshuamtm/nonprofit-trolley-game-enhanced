@@ -1,8 +1,8 @@
 import { create } from 'zustand';
-import { Database, isDemo } from '../services/supabase';
+import { Database, isDemo } from '../services/supabaseCompat';
 import { RoomService } from '../services/rooms';
 import { MockRoomService } from '../services/mockData';
-import { realtimeService } from '../services/realtime';
+import { realtimeService } from '../services/realtimeLegacy';
 
 type Session = Database['public']['Tables']['sessions']['Row'];
 type Participant = Database['public']['Tables']['participants']['Row'];

@@ -1,5 +1,5 @@
 // Mock data for development and testing without Supabase
-import { isDemo } from './supabase';
+import { isDemo } from './supabaseCompat';
 
 export const mockScenarios = [
   {

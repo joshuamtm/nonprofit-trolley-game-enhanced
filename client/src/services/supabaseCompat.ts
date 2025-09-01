@@ -1,29 +1,8 @@
-import { createClient } from '@supabase/supabase-js';
+// Compatibility layer for migrating from Supabase to new API
+// This file provides the same interface as the old supabase.ts but uses the new services
 
-const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
-const supabaseAnonKey = process.env.REACT_APP_SUPABASE_ANON_KEY;
-
-// Export null if credentials not provided (demo mode)
-export const supabase = (!supabaseUrl || !supabaseAnonKey) 
-  ? null 
-  : createClient(supabaseUrl, supabaseAnonKey, {
-      auth: {
-        persistSession: false,
-        autoRefreshToken: false,
-      },
-      realtime: {
-        params: {
-          eventsPerSecond: 10,
-        },
-      },
-    });
-
-// Check if we're in demo mode
-export const isDemo = !supabase;
-
-if (isDemo) {
-  console.warn('🎮 Running in DEMO MODE - Supabase credentials not configured');
-}
+export const supabase = null; // No longer using Supabase client
+export const isDemo = !process.env.REACT_APP_API_URL; // Demo mode if no API URL
 
 export type Database = {
   public: {
@@ -154,3 +133,7 @@ export type Database = {
     };
   };
 };
+
+if (isDemo) {
+  console.warn('🎮 Running in DEMO MODE - API not configured');
+}
