@@ -1,0 +1,25 @@
+{
+  "id": "f6a7b8c9-d0e1-2345-fabc-678901234567",
+  "title": "Donor Targeting and Engagement",
+  "context": "Your nonprofit needs to raise $1M annually to maintain services. An AI system analyzing donor data could identify high-potential major donors and optimize outreach timing, potentially increasing donations by 30% ($300K). However, this system would deprioritize small-dollar grassroots donors who provide community legitimacy and volunteer hours, possibly alienating the 2,000 donors who give under $100 but provide 5,000 volunteer hours annually.",
+  "ai_option": "Pull the lever: Use AI to maximize donation revenue through targeted major donor cultivation.",
+  "non_ai_option": "Don't pull: Maintain current inclusive approach that values all donors equally regardless of capacity.",
+  "assumptions": [
+    "Major donors (>$1,000) comprise 20% of donors but 80% of revenue",
+    "Small donors (<$100) comprise 70% of donors and 60% of volunteers",
+    "AI can predict optimal engagement timing with 75% accuracy"
+  ],
+  "ethical_axes": ["equity", "transparency", "accountability"],
+  "risk_notes": "Focusing on major donors could transform organization from community-based to elite-funded, changing mission alignment.",
+  "metrics": {
+    "benefit_estimate": "+$300,000 annual revenue",
+    "error_rate": "25% engagement mistiming",
+    "cost_comparison": "3x ROI on fundraising efforts"
+  },
+  "content_warnings": [],
+  "difficulty_level": "beginner",
+  "discussion_prompts": [
+    "Should nonprofits optimize for financial sustainability or community engagement?",
+    "What are the long-term costs of alienating grassroots supporters?"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "c3d4e5f6-a7b8-9012-cdef-345678901234",
+  "title": "Homeless Services Priority Queue",
+  "context": "Your shelter network has 200 beds serving 1,000 unhoused individuals. An AI system could predict which individuals are most likely to successfully transition to permanent housing with support, potentially housing 50 more people permanently per year. However, this would deprioritize those with severe mental illness or addiction who are 'less likely to succeed' according to the algorithm, possibly condemning them to chronic homelessness.",
+  "ai_option": "Pull the lever: Use AI to prioritize those most likely to achieve housing stability, helping 50 more people escape homelessness.",
+  "non_ai_option": "Don't pull: Maintain first-come-first-served with human case worker discretion for emergency cases.",
+  "assumptions": [
+    "AI predictions are based on 10 years of outcome data",
+    "Success is defined as maintaining housing for 12+ months",
+    "Current system houses 150 people permanently per year"
+  ],
+  "ethical_axes": ["equity", "bias", "accountability"],
+  "risk_notes": "Creating a two-tier system where the most vulnerable are systematically excluded from services.",
+  "metrics": {
+    "benefit_estimate": "+50 people housed permanently per year",
+    "error_rate": "15% prediction error on housing success",
+    "cost_comparison": "33% increase in successful transitions"
+  },
+  "content_warnings": ["poverty", "mental_health"],
+  "difficulty_level": "advanced",
+  "discussion_prompts": [
+    "Should we optimize for total lives improved or prioritize the most vulnerable?",
+    "How might this affect public perception of 'deserving' vs 'undeserving' poor?"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "b2c3d4e5-f6a7-8901-bcde-f23456789012",
+  "title": "Youth Mental Health Crisis Screening",
+  "context": "Your nonprofit provides mental health support to 5,000 at-risk youth annually. An AI chatbot could provide 24/7 initial screening and crisis detection, potentially identifying 500 more youth in crisis early. However, the AI has a 2% false positive rate that could traumatize healthy teens with crisis interventions, and a 0.5% false negative rate that might miss genuine crisis cases who use coded language or cultural expressions the AI doesn't recognize.",
+  "ai_option": "Pull the lever: Deploy AI screening to catch 500 more youth in crisis, accepting false positives and potential missed cases.",
+  "non_ai_option": "Don't pull: Maintain human-only screening during business hours, reaching fewer youth but with trained counselor judgment.",
+  "assumptions": [
+    "Current counselors work 40 hours/week and can screen 20 youth daily",
+    "AI operates 24/7 and can handle unlimited concurrent conversations",
+    "Youth are more likely to engage with anonymous AI than schedule appointments"
+  ],
+  "ethical_axes": ["safety", "privacy", "autonomy"],
+  "risk_notes": "False negatives in crisis detection could have fatal consequences; false positives could breach trust and stigmatize healthy youth.",
+  "metrics": {
+    "benefit_estimate": "+500 at-risk youth identified annually",
+    "error_rate": "2% false positive, 0.5% false negative",
+    "cost_comparison": "24/7 availability vs 40hr/week human coverage"
+  },
+  "content_warnings": ["mental_health", "crisis"],
+  "difficulty_level": "advanced",
+  "discussion_prompts": [
+    "Is it ethical to use AI for mental health screening given the stakes?",
+    "How do we weigh increased reach against the risk of errors in crisis detection?"
+  ]
+}

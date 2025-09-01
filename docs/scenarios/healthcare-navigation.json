@@ -1,0 +1,25 @@
+{
+  "id": "b8c9d0e1-f2a3-4567-bcde-890123456789",
+  "title": "Healthcare Benefits Navigation",
+  "context": "Your nonprofit helps 3,000 low-income families navigate healthcare benefits annually. An AI assistant could process applications 24/7 and guide families through complex insurance forms, potentially helping 1,500 more families access care. However, it might miss nuanced situations like mixed-status families, those needing translation beyond common languages, or cases requiring advocacy against denials, leaving 200-300 complex cases without adequate support.",
+  "ai_option": "Pull the lever: Deploy AI to help 1,500 more families access healthcare, accepting limitations for complex cases.",
+  "non_ai_option": "Don't pull: Maintain human navigators who can advocate and handle complex situations but serve fewer families.",
+  "assumptions": [
+    "AI can handle 80% of standard cases accurately",
+    "Human navigators resolve 95% of cases including complex ones",
+    "Average family waits 2 weeks for human navigator appointment"
+  ],
+  "ethical_axes": ["equity", "safety", "accountability"],
+  "risk_notes": "Families with greatest barriers might be least served by automated systems, deepening health disparities.",
+  "metrics": {
+    "benefit_estimate": "+1,500 families accessing healthcare",
+    "error_rate": "10% require human escalation",
+    "cost_comparison": "5x increase in families served per dollar"
+  },
+  "content_warnings": ["health"],
+  "difficulty_level": "intermediate",
+  "discussion_prompts": [
+    "Should we prioritize serving more people or ensuring complex cases get expert help?",
+    "How might automation affect trust in the benefits system?"
+  ]
+}

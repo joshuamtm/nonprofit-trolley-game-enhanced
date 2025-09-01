@@ -1,0 +1,25 @@
+{
+  "id": "e5f6a7b8-c9d0-1234-efab-567890123456",
+  "title": "Scholarship Selection Algorithm",
+  "context": "Your education nonprofit awards 100 college scholarships annually from 2,000 applicants. An AI system could evaluate applications using academic performance, financial need, and extracurricular data, potentially identifying 20 more high-potential students from underserved communities. However, it might penalize students from schools without robust extracurricular programs or those whose challenges aren't easily quantifiable, potentially excluding first-generation college students with non-traditional backgrounds.",
+  "ai_option": "Pull the lever: Use AI to identify 120 scholarship recipients, potentially finding more hidden talent.",
+  "non_ai_option": "Don't pull: Keep human committee review that can appreciate non-traditional strengths and contextual challenges.",
+  "assumptions": [
+    "AI trained on 10 years of scholarship recipient success data",
+    "Human reviewers can process 20 applications thoroughly per day",
+    "20% of applicants have non-traditional backgrounds"
+  ],
+  "ethical_axes": ["bias", "equity", "transparency"],
+  "risk_notes": "AI might perpetuate existing educational inequalities by favoring quantifiable achievements over potential.",
+  "metrics": {
+    "benefit_estimate": "+20 additional scholarships awarded",
+    "error_rate": "5% lower graduation rate for AI-selected recipients",
+    "cost_comparison": "80% reduction in review time"
+  },
+  "content_warnings": ["discrimination"],
+  "difficulty_level": "intermediate",
+  "discussion_prompts": [
+    "Can algorithms truly evaluate human potential fairly?",
+    "How do we ensure AI doesn't perpetuate existing educational inequities?"
+  ]
+}

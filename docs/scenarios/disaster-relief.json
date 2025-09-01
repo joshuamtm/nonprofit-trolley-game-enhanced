@@ -1,0 +1,25 @@
+{
+  "id": "d4e5f6a7-b8c9-0123-defa-456789012345",
+  "title": "Disaster Relief Distribution",
+  "context": "Following a major flood, your nonprofit must distribute emergency supplies to 5,000 affected families across 50 neighborhoods. An AI system using satellite imagery and social media data could identify the 3,000 most severely impacted families within hours. However, it would miss undocumented families who avoid official channels and elderly residents without digital footprints, potentially excluding 400-500 vulnerable households from immediate aid.",
+  "ai_option": "Pull the lever: Use AI to rapidly identify and serve 3,000 severely impacted families based on digital data.",
+  "non_ai_option": "Don't pull: Use traditional door-to-door assessment, slower but inclusive of all residents regardless of documentation status.",
+  "assumptions": [
+    "Time is critical - each day of delay increases health risks",
+    "AI can process assessment in 2 hours vs 3 days for human teams",
+    "Undocumented families comprise 8-10% of affected population"
+  ],
+  "ethical_axes": ["equity", "privacy", "safety"],
+  "risk_notes": "Speed versus inclusivity trade-off could leave the most marginalized without aid when they need it most.",
+  "metrics": {
+    "benefit_estimate": "3,000 families served in 2 hours vs 3 days",
+    "error_rate": "8-10% population missed by digital assessment",
+    "cost_comparison": "90% faster response time"
+  },
+  "content_warnings": ["crisis"],
+  "difficulty_level": "intermediate",
+  "discussion_prompts": [
+    "In emergencies, is speed more important than complete coverage?",
+    "How do we account for digital invisibility in AI-driven aid distribution?"
+  ]
+}

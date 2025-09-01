@@ -1,0 +1,25 @@
+{
+  "id": "a7b8c9d0-e1f2-3456-abcd-789012345678",
+  "title": "Volunteer Skills Matching",
+  "context": "Your nonprofit coordinates 1,000 volunteers across 20 programs. An AI matching system could analyze skills, availability, and personality to optimize placements, potentially increasing volunteer retention by 40% and impact by 25%. However, it might exclude volunteers with disabilities, irregular schedules, or those whose contributions don't fit neat categories, potentially losing 100 dedicated but 'inefficient' volunteers who provide crucial community connections.",
+  "ai_option": "Pull the lever: Deploy AI matching to optimize volunteer placement and increase overall program impact.",
+  "non_ai_option": "Don't pull: Keep human coordinators who understand individual circumstances and hidden contributions.",
+  "assumptions": [
+    "Current volunteer retention rate is 60% annually",
+    "AI uses personality tests, availability data, and skill assessments",
+    "10% of volunteers have non-standard contributions"
+  ],
+  "ethical_axes": ["autonomy", "bias", "equity"],
+  "risk_notes": "Optimization might exclude volunteers whose value isn't easily quantified, reducing community diversity.",
+  "metrics": {
+    "benefit_estimate": "40% increase in volunteer retention",
+    "error_rate": "15% mismatched placements",
+    "cost_comparison": "25% increase in program effectiveness"
+  },
+  "content_warnings": ["discrimination"],
+  "difficulty_level": "beginner",
+  "discussion_prompts": [
+    "How do we measure volunteer contributions that aren't easily quantifiable?",
+    "Is efficiency worth potentially excluding diverse community members?"
+  ]
+}

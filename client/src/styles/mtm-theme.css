@@ -1,0 +1,181 @@
+/* Meet the Moment Theme Variables and Global Styles */
+:root {
+  /* MTM Brand Colors */
+  --mtm-primary: #1ab1d2;        /* Light Blue */
+  --mtm-accent: #f18f38;         /* Orange */
+  --mtm-navy: #1c487b;           /* Dark Blue */
+  --mtm-soft-blue: #85abbd;      /* Muted Blue */
+  --mtm-bg-cream: #fef4e3;       /* Background Cream */
+  --mtm-bg-white: #fafdfe;       /* Background White */
+  --mtm-text-primary: #333333;   /* Primary Text */
+  --mtm-text-secondary: #666666; /* Secondary Text */
+  --mtm-border: #e5e5e5;         /* Border Color */
+  
+  /* Typography */
+  --mtm-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  
+  /* Spacing */
+  --mtm-space-xs: 4px;
+  --mtm-space-sm: 8px;
+  --mtm-space-md: 16px;
+  --mtm-space-lg: 24px;
+  --mtm-space-xl: 48px;
+  
+  /* Borders */
+  --mtm-border-radius-sm: 4px;
+  --mtm-border-radius-md: 6px;
+  --mtm-border-radius-lg: 8px;
+  
+  /* Shadows */
+  --mtm-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --mtm-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
+  --mtm-shadow-lg: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Global Typography */
+body {
+  font-family: var(--mtm-font-family);
+  color: var(--mtm-text-primary);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--mtm-navy);
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 1.3;
+  font-weight: 600;
+  color: var(--mtm-navy);
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--mtm-navy);
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--mtm-navy);
+}
+
+/* MTM Button Styles */
+.mtm-btn {
+  padding: 12px 24px;
+  border-radius: var(--mtm-border-radius-md);
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--mtm-font-family);
+}
+
+.mtm-btn-primary {
+  background-color: var(--mtm-primary);
+  color: white;
+}
+
+.mtm-btn-primary:hover {
+  background-color: #15a0c0;
+  transform: translateY(-1px);
+  box-shadow: var(--mtm-shadow-md);
+}
+
+.mtm-btn-secondary {
+  background-color: var(--mtm-accent);
+  color: white;
+}
+
+.mtm-btn-secondary:hover {
+  background-color: #e67e22;
+  transform: translateY(-1px);
+  box-shadow: var(--mtm-shadow-md);
+}
+
+.mtm-btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--mtm-primary);
+  color: var(--mtm-primary);
+}
+
+.mtm-btn-outline:hover {
+  background-color: var(--mtm-primary);
+  color: white;
+}
+
+/* MTM Card Styles */
+.mtm-card {
+  background: white;
+  border-radius: var(--mtm-border-radius-lg);
+  padding: var(--mtm-space-lg);
+  box-shadow: var(--mtm-shadow-sm);
+  transition: box-shadow 0.2s ease;
+}
+
+.mtm-card:hover {
+  box-shadow: var(--mtm-shadow-md);
+}
+
+/* MTM Form Elements */
+.mtm-input {
+  padding: 10px 12px;
+  border: 1px solid var(--mtm-border);
+  border-radius: var(--mtm-border-radius-sm);
+  font-size: 16px;
+  width: 100%;
+  transition: border-color 0.2s;
+  font-family: var(--mtm-font-family);
+}
+
+.mtm-input:focus {
+  outline: none;
+  border-color: var(--mtm-primary);
+  box-shadow: 0 0 0 3px rgba(26, 177, 210, 0.1);
+}
+
+/* Focus States for Accessibility */
+*:focus-visible {
+  outline: 2px solid var(--mtm-primary);
+  outline-offset: 2px;
+}
+
+/* Container */
+.mtm-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section Padding */
+.mtm-section {
+  padding: var(--mtm-space-xl) 0;
+}
+
+/* MTM Footer */
+.mtm-footer {
+  background-color: var(--mtm-bg-cream);
+  text-align: center;
+  padding: var(--mtm-space-lg);
+  margin-top: auto;
+}
+
+.mtm-footer img {
+  height: 40px;
+  margin-bottom: var(--mtm-space-sm);
+}
+
+.mtm-footer p {
+  color: var(--mtm-text-secondary);
+  font-size: 14px;
+  margin: 0;
+}

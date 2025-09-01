@@ -1,0 +1,25 @@
+{
+  "id": "c9d0e1f2-a3b4-5678-cdef-901234567890",
+  "title": "Community Grant Allocation",
+  "context": "Your foundation distributes $5M in grants to 50 community organizations annually. An AI system could analyze impact metrics, financial health, and community needs data to identify high-impact organizations, potentially increasing measurable community benefit by 35%. However, it would favor organizations with strong data collection over grassroots groups doing critical but hard-to-measure work, potentially defunding 10-15 small culturally-specific organizations.",
+  "ai_option": "Pull the lever: Use AI to maximize measurable impact, increasing community benefit metrics by 35%.",
+  "non_ai_option": "Don't pull: Keep human review process that values relationship-building and hard-to-quantify community trust.",
+  "assumptions": [
+    "Large organizations have dedicated data staff",
+    "Grassroots organizations serve specific cultural communities",
+    "Current process includes site visits and community input"
+  ],
+  "ethical_axes": ["equity", "transparency", "accountability"],
+  "risk_notes": "Data-driven allocation might eliminate organizations serving marginalized communities whose impact resists quantification.",
+  "metrics": {
+    "benefit_estimate": "35% increase in measurable outcomes",
+    "error_rate": "20% of impact is unmeasurable",
+    "cost_comparison": "50% reduction in grant review costs"
+  },
+  "content_warnings": [],
+  "difficulty_level": "advanced",
+  "discussion_prompts": [
+    "How do we value community trust versus measurable outcomes?",
+    "What gets lost when we only fund what we can measure?"
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Nonprofit Trolley Game Scenario",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "context",
+    "ai_option",
+    "non_ai_option",
+    "assumptions",
+    "ethical_axes",
+    "risk_notes",
+    "metrics"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for the scenario"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 100,
+      "description": "Short, descriptive scenario name"
+    },
+    "context": {
+      "type": "string",
+      "minLength": 50,
+      "maxLength": 500,
+      "description": "One-paragraph setup explaining the situation"
+    },
+    "ai_option": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 300,
+      "description": "What pulling the lever (using AI) means in this scenario"
+    },
+    "non_ai_option": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 300,
+      "description": "What not pulling the lever (keeping human-only approach) means"
+    },
+    "assumptions": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 5,
+      "items": {
+        "type": "string",
+        "minLength": 10,
+        "maxLength": 200
+      },
+      "description": "Explicit assumptions about the scenario"
+    },
+    "ethical_axes": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 4,
+      "items": {
+        "type": "string",
+        "enum": ["bias", "privacy", "safety", "equity", "transparency", "accountability", "autonomy"]
+      },
+      "description": "Primary ethical dimensions at play"
+    },
+    "risk_notes": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 300,
+      "description": "Known failure modes or potential harms to consider"
+    },
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "benefit_estimate": {
+          "type": "string",
+          "description": "Estimated positive impact (e.g., '+500 families served')"
+        },
+        "error_rate": {
+          "type": "string",
+          "description": "Estimated error or failure rate (e.g., '2-5% false positives')"
+        },
+        "cost_comparison": {
+          "type": "string",
+          "description": "Resource comparison (e.g., '10x faster, 50% cheaper')"
+        }
+      },
+      "required": ["benefit_estimate"],
+      "additionalProperties": true
+    },
+    "content_warnings": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["crisis", "poverty", "health", "discrimination", "violence", "mental_health"]
+      },
+      "description": "Optional content warning tags"
+    },
+    "difficulty_level": {
+      "type": "string",
+      "enum": ["beginner", "intermediate", "advanced"],
+      "default": "intermediate",
+      "description": "Complexity level for facilitation"
+    },
+    "discussion_prompts": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "type": "string",
+        "maxLength": 200
+      },
+      "description": "Optional follow-up questions for facilitators"
+    }
+  }
+}

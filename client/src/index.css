@@ -1,0 +1,30 @@
+/* Import MTM Theme */
+@import './styles/mtm-theme.css';
+
+body {
+  margin: 0;
+  font-family: var(--mtm-font-family);
+  color: var(--mtm-text-primary);
+  background-color: var(--mtm-bg-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Ensure full height for footer positioning */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}

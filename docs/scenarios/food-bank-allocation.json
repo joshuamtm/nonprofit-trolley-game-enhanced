@@ -1,0 +1,25 @@
+{
+  "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "title": "Food Bank Resource Allocation",
+  "context": "Your food bank serves 10,000 families monthly but struggles with inefficient distribution. An AI system could predict demand patterns and optimize delivery routes, potentially serving 2,000 more families with the same resources. However, the AI might deprioritize elderly recipients who order irregularly or rural families with inconsistent internet access, potentially leaving 200-300 vulnerable households underserved.",
+  "ai_option": "Pull the lever: Deploy AI to optimize food distribution, reaching 2,000 more families but risking exclusion of irregular users.",
+  "non_ai_option": "Don't pull: Keep current human-managed system that serves fewer families but maintains personal knowledge of vulnerable cases.",
+  "assumptions": [
+    "AI predictions are 85% accurate based on historical data",
+    "Current staff can manually track about 50 special cases",
+    "The 2,000 additional families are food-insecure but not at crisis level"
+  ],
+  "ethical_axes": ["equity", "bias", "safety"],
+  "risk_notes": "AI might systematically exclude those who need help most but engage least predictably with services.",
+  "metrics": {
+    "benefit_estimate": "+2,000 families served monthly",
+    "error_rate": "3-5% misallocation rate",
+    "cost_comparison": "40% reduction in distribution costs"
+  },
+  "content_warnings": ["poverty"],
+  "difficulty_level": "intermediate",
+  "discussion_prompts": [
+    "How do we balance serving more people versus ensuring we don't abandon the most vulnerable?",
+    "What safeguards could protect irregular users while still leveraging AI benefits?"
+  ]
+}

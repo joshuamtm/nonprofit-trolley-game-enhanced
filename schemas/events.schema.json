@@ -1,0 +1,255 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Realtime Event Contracts",
+  "definitions": {
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "userId": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9-_]{8,36}$"
+    },
+    "roomId": {
+      "type": "string",
+      "pattern": "^[A-Z0-9]{6}$"
+    },
+    "sessionId": {
+      "type": "string",
+      "format": "uuid"
+    }
+  },
+  "events": {
+    "room_created": {
+      "type": "object",
+      "required": ["roomId", "sessionId", "facilitatorId", "timestamp", "config"],
+      "properties": {
+        "roomId": { "$ref": "#/definitions/roomId" },
+        "sessionId": { "$ref": "#/definitions/sessionId" },
+        "facilitatorId": { "$ref": "#/definitions/userId" },
+        "timestamp": { "$ref": "#/definitions/timestamp" },
+        "config": {
+          "type": "object",
+          "properties": {
+            "timerDuration": {
+              "type": "number",
+              "minimum": 10,
+              "maximum": 120,
+              "default": 30
+            },
+            "maxParticipants": {
+              "type": "number",
+              "minimum": 10,
+              "maximum": 500,
+              "default": 200
+            },
+            "moderationEnabled": {
+              "type": "boolean",
+              "default": true
+            },
+            "contentWarningsEnabled": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        }
+      }
+    },
+    "participant_joined": {
+      "type": "object",
+      "required": ["roomId", "participantId", "timestamp", "fingerprint"],
+      "properties": {
+        "roomId": { "$ref": "#/definitions/roomId" },
+        "participantId": { "$ref": "#/definitions/userId" },
+        "timestamp": { "$ref": "#/definitions/timestamp" },
+        "fingerprint": {
+          "type": "string",
+          "description": "Browser fingerprint for double-vote prevention"
+        },
+        "userAgent": {
+          "type": "string"
+        }
+      }
+    },
+    "vote_cast": {
+      "type": "object",
+      "required": ["roomId", "participantId", "scenarioId", "vote", "timestamp"],
+      "properties": {
+        "roomId": { "$ref": "#/definitions/roomId" },
+        "participantId": { "$ref": "#/definitions/userId" },
+        "scenarioId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "vote": {
+          "type": "string",
+          "enum": ["pull", "dont_pull"]
+        },
+        "timestamp": { "$ref": "#/definitions/timestamp" },
+        "latency": {
+          "type": "number",
+          "description": "Client-side latency in milliseconds"
+        }
+      }
+    },
+    "rationale_added": {
+      "type": "object",
+      "required": ["roomId", "participantId", "scenarioId", "vote", "rationale", "timestamp"],
+      "properties": {
+        "roomId": { "$ref": "#/definitions/roomId" },
+        "participantId": { "$ref": "#/definitions/userId" },
+        "scenarioId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "vote": {
+          "type": "string",
+          "enum": ["pull", "dont_pull"]
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "pattern": "^[^<>]{1,80}$",
+          "description": "User's rationale, max 8 words or 80 chars"
+        },
+        "timestamp": { "$ref": "#/definitions/timestamp" },
+        "moderated": {
+          "type": "boolean",
+          "description": "Whether this rationale was flagged by moderation"
+        }
+      }
+    },
+    "timer_started": {
+      "type": "object",
+      "required": ["roomId", "scenarioId", "duration", "startTime"],
+      "properties": {
+        "roomId": { "$ref": "#/definitions/roomId" },
+        "scenarioId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "duration": {
+          "type": "number",
+          "minimum": 10,
+          "maximum": 120
+        },
+        "startTime": { "$ref": "#/definitions/timestamp" }
+      }
+    },
+    "timer_tick": {
+      "type": "object",
+      "required": ["roomId", "scenarioId", "secondsRemaining"],
+      "properties": {
+        "roomId": { "$ref": "#/definitions/roomId" },
+        "scenarioId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "secondsRemaining": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "decision_announced": {
+      "type": "object",
+      "required": ["roomId", "scenarioId", "decision", "pullCount", "dontPullCount", "totalVotes", "timestamp"],
+      "properties": {
+        "roomId": { "$ref": "#/definitions/roomId" },
+        "scenarioId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "decision": {
+          "type": "string",
+          "enum": ["ai_track", "non_ai_track", "tie"]
+        },
+        "pullCount": {
+          "type": "number",
+          "minimum": 0
+        },
+        "dontPullCount": {
+          "type": "number",
+          "minimum": 0
+        },
+        "totalVotes": {
+          "type": "number",
+          "minimum": 0
+        },
+        "timestamp": { "$ref": "#/definitions/timestamp" }
+      }
+    },
+    "word_clouds_updated": {
+      "type": "object",
+      "required": ["roomId", "scenarioId", "pullCloud", "dontPullCloud"],
+      "properties": {
+        "roomId": { "$ref": "#/definitions/roomId" },
+        "scenarioId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "pullCloud": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": { "type": "string" },
+              "count": { "type": "number" },
+              "size": { "type": "number" }
+            }
+          }
+        },
+        "dontPullCloud": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": { "type": "string" },
+              "count": { "type": "number" },
+              "size": { "type": "number" }
+            }
+          }
+        }
+      }
+    },
+    "session_exported": {
+      "type": "object",
+      "required": ["roomId", "sessionId", "exportUrl", "timestamp"],
+      "properties": {
+        "roomId": { "$ref": "#/definitions/roomId" },
+        "sessionId": { "$ref": "#/definitions/sessionId" },
+        "exportUrl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "format": {
+          "type": "string",
+          "enum": ["csv", "json", "pdf"],
+          "default": "csv"
+        },
+        "timestamp": { "$ref": "#/definitions/timestamp" }
+      }
+    },
+    "moderation_event": {
+      "type": "object",
+      "required": ["roomId", "participantId", "type", "reason", "timestamp"],
+      "properties": {
+        "roomId": { "$ref": "#/definitions/roomId" },
+        "participantId": { "$ref": "#/definitions/userId" },
+        "type": {
+          "type": "string",
+          "enum": ["profanity_filtered", "pii_removed", "rate_limited", "duplicate_vote_blocked"]
+        },
+        "reason": {
+          "type": "string"
+        },
+        "originalContent": {
+          "type": "string",
+          "description": "Original content before moderation (stored securely)"
+        },
+        "timestamp": { "$ref": "#/definitions/timestamp" }
+      }
+    }
+  }
+}

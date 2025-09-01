@@ -1,0 +1,205 @@
+.home-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: var(--mtm-text-primary);
+  flex: 1;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  color: var(--mtm-navy);
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  color: var(--mtm-soft-blue);
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: var(--mtm-text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.action-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.card {
+  background: white;
+  border-radius: var(--mtm-border-radius-lg);
+  padding: 2rem;
+  box-shadow: var(--mtm-shadow-sm);
+  text-align: center;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--mtm-shadow-md);
+}
+
+.facilitator-card {
+  border-color: var(--mtm-primary);
+}
+
+.participant-card {
+  border-color: var(--mtm-accent);
+}
+
+.card h2 {
+  color: var(--mtm-navy);
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: var(--mtm-text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: var(--mtm-border-radius-md);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.cta-button.primary {
+  background: var(--mtm-primary);
+  color: white;
+}
+
+.cta-button.primary:hover {
+  background: #15a0c0;
+  transform: translateY(-1px);
+  box-shadow: var(--mtm-shadow-md);
+}
+
+.cta-button.secondary {
+  background: var(--mtm-accent);
+  color: white;
+}
+
+.cta-button.secondary:hover {
+  background: #e67e22;
+  transform: translateY(-1px);
+  box-shadow: var(--mtm-shadow-md);
+}
+
+.features {
+  margin-bottom: 4rem;
+}
+
+.features h2 {
+  text-align: center;
+  color: var(--mtm-navy);
+  margin-bottom: 2rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.feature {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.feature h3 {
+  color: var(--mtm-navy);
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  color: var(--mtm-text-secondary);
+  line-height: 1.4;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid var(--mtm-border);
+  color: var(--mtm-text-secondary);
+}
+
+/* Error boundary styles */
+.error-boundary {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--mtm-bg-cream);
+}
+
+.error-container {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--mtm-border-radius-lg);
+  box-shadow: var(--mtm-shadow-sm);
+  text-align: center;
+  max-width: 500px;
+}
+
+.retry-button {
+  background: var(--mtm-primary);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--mtm-border-radius-md);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.retry-button:hover {
+  background: #15a0c0;
+  transform: translateY(-1px);
+  box-shadow: var(--mtm-shadow-md);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .home-page {
+    padding: 1rem;
+  }
+  
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .tagline {
+    font-size: 1.2rem;
+  }
+  
+  .action-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}

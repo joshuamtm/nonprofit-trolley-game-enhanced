@@ -1,0 +1,25 @@
+{
+  "id": "d0e1f2a3-b4c5-6789-defa-012345678901",
+  "title": "Refugee Employment Matching",
+  "context": "Your organization helps 500 refugees find employment annually. An AI system could match skills from their home countries to local job opportunities, potentially placing 200 more refugees in jobs within their first year. However, the system might undervalue foreign credentials and non-Western educational backgrounds, potentially steering highly qualified individuals toward lower-wage positions and perpetuating underemployment patterns.",
+  "ai_option": "Pull the lever: Use AI to place 200 more refugees in jobs quickly, risking credential undervaluation.",
+  "non_ai_option": "Don't pull: Keep human counselors who can advocate for credential recognition but place fewer people.",
+  "assumptions": [
+    "AI trained primarily on domestic employment data",
+    "60% of refugees have professional experience from home countries",
+    "Current human process places 500 people in 12 months"
+  ],
+  "ethical_axes": ["bias", "equity", "autonomy"],
+  "risk_notes": "Could institutionalize discrimination against foreign credentials, limiting economic mobility for refugee families.",
+  "metrics": {
+    "benefit_estimate": "+200 job placements annually",
+    "error_rate": "30% placed below qualification level",
+    "cost_comparison": "40% faster placement process"
+  },
+  "content_warnings": ["discrimination"],
+  "difficulty_level": "intermediate",
+  "discussion_prompts": [
+    "Is faster employment worth potential long-term underemployment?",
+    "How can AI systems properly value diverse global experiences?"
+  ]
+}
